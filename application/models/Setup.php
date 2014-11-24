@@ -7,25 +7,27 @@
     function TBL_Regimenten() {
       $fields = array(
         'ID' => array(
-          'type'           =>
-          'constraint'     =>
-          'auto_increment' =>
+          'type'           => 'int',
+          'constraint'     => '11',
+          'auto_increment' => TRUE,
           ),
           
         'Regiment' => array(
-          'type'       =>
-          'constraint' =>
-          'default'    =>
+          'type'       => 'varchar',
+          'constraint' => '450',
+          'default'    => 'Onbekend',
           ), 
           
-        'Added' => array(),
-         'type'       => 'varchar'
-         'constraint' => '50'
+        'Added' => array(
+         'type'       => 'varchar',
+         'constraint' => '50',
          'default'    => 'Onbekend',
+         ),
       );
       
       // Build and send to server
       $this->dbforge->add_field($fields);
+      $this->dbforge->add_key('ID', TRUE);
       $this->dbforge->create_table('Regimenten');
     }
     
