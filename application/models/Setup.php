@@ -53,7 +53,7 @@
       
       // Build and send to server
       $this->dbforge->add_key('PID', TRUE);
-      $this->dbforge->create_table('Regimenten');
+      $this->dbforge->create_table('Gesneuvelde');
     }
     
     function TBL_Burgerslachtoffers() {
@@ -61,6 +61,12 @@
     }
     
     function TBL_Begraafplaatsen() {
+      $this->dbforge->add_field('GID INT(11) NOT NULL AUTO_INCREMENT');
+      $this->dbforge->add_field('Begraafplaats TEXT');
+      $this->dbforge->add_field('Type VARCHAR(45) DEFAULT NULL');
       
+      // Build and send to server
+      $this->dbforge->add_key('GID', TRUE);
+      $this->dbforge->create_table('Begraafplaatsen');
     }
   }
