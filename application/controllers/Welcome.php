@@ -32,9 +32,9 @@
 			}
 			
 			// Views
-			$this->load->view('components/header', $Data);
-			$this->load->view('components/navbar');
+			// $this->load->view('components/header', $Data);
+			// $this->load->view('components/navbar');
 			$this->load->view('results', $Result);
-			$this->load->view('components/footer');
+			// $this->load->view('components/footer');
 		}
 	}
