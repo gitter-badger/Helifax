@@ -10,6 +10,22 @@
         <?php elseif($CreatDB == FALSE): ?>
           <li><span class="octicon octicon-issue-opened"></span> Database not created.</li>
         <?php endif; ?>
+        
+        <?php if($TBL_1 == TRUE): ?>
+        <?php elseif($TBL_1 == FALSE): ?>
+        <?php endif; ?>
+        
+        <?php if($TBL_2 == TRUE): ?>
+        <?php elseif($TBL_2 == FALSE): ?>
+        <?php endif; ?>
+        
+        <?php if($TBL_3 == TRUE): ?>
+        <?php elseif($TBL_3 == FALSE): ?>
+        <?php endif; ?>
+        
+        <?php if($TBL_4 == TRUE): ?>
+        <?php elseif($TBL_4 == FALSE): ?>
+        <?php endif; ?>
       <ul>
     </div>
     
