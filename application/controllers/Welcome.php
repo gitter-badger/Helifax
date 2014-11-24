@@ -21,7 +21,8 @@
 			
 			// Build database
 			if($this->dbutil->database_exists('FallenSoldiers')) {
-				
+				$Data['Message'] = "Database already exists"; 
+				$this->load->view('error', $Data); 
 			} else {
 				$Result['CreateDB'] = $this->Setup->CreateDB();
 				$Result['TBL_1'] = $this->Setup->TBL_Regimenten();
