@@ -25,6 +25,8 @@
       );
       
       // Build and send to server
+      $this->dbforge->add_field($fields);
+      $this->dbforge->create_table('Regimenten');
     }
     
     function TBL_Gesneuvelde() {
