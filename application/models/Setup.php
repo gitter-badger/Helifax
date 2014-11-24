@@ -57,7 +57,25 @@
     }
     
     function TBL_Burgerslachtoffers() {
+      $this->dbforge->add_field("BID INT(11) NOT NULL AUTO_INCREMENT");
+      $this->dbforge->add_field("Voornaam VARCHAR(255) DEFAULT 'Onbekend'");
+      $this->dbforge->add_field("Achternaam VARCHAR(255) DEFAULT 'Onbekend'");
+      $this->dbforge->add_field("Burgerlijke_stand VARCHAR(45) DEFAULT 'Onbekend'");
+      $this->dbforge->add_field("Geboren_plaats VARCHAR(255) DEFAULT 'Onbekend'");
+      $this->dbforge->add_field("Geboren_datum VARCHAR(255) DEFAULT NULL");
+      $this->dbforge->add_field("Geslacht VARCHAR(10) DEFAULT NULL");
+      $this->dbforge->add_field("Beroep VARCHAR(45) DEFAULT NULL");
+      $this->dbforge->add_field("Werkgever VARCHAR(45) DEFAULT NULL");
+      $this->dbforge->add_field("Overleden_plaats VARCHAR(45) DEFAULT NULL");
+      $this->dbforge->add_field("Overleden_datum VARCHAR(45) DEFAULT NULL");
+      $this->dbforge->add_field('Doodsoorzaak TEXT');
+      $this->dbforge->add_field('Woonplaats_straat TEXT');
+      $this->dbforge->add_field("Woonplaats_gemeente VARCHAR(45) DEFAULT NULL");
+      $this->dbforge->add_field('HerdenkingID INT(11) DEFAULT NULL');
       
+      // Build and send to server
+      $this->dbforge->add_key('BID', TRUE);
+      $this->dbforge->create_table('Burgerslachtoffers');
     }
     
     function TBL_Begraafplaatsen() {
