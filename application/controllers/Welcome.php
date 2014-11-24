@@ -23,17 +23,17 @@
 			if($this->dbutil->database_exists('FallenSoldiers')) {
 				
 			} else {
-				$CreateDB = $this->Setup->CreateDB();
-				$TBL_1 = $this->Setup->TBL_Regimenten();
-				$TBL_2 = $this->Setup->TBL_Gesneuvelde();
-				$TBL_3 = $this->Setup->TBL_Burgerslachtoffers();
-				$TBL_4 = $this->Setup->TBL_Begraafplaatsen();
+				$Result['CreateDB'] = $this->Setup->CreateDB();
+				$Result['TBL_1'] = $this->Setup->TBL_Regimenten();
+				$Result['TBL_2'] = $this->Setup->TBL_Gesneuvelde();
+				$Result['TBL_3'] = $this->Setup->TBL_Burgerslachtoffers();
+				$Result['TBL_4'] = $this->Setup->TBL_Begraafplaatsen();
 			}
 			
 			// Views
 			$this->load->view('components/header', $Data);
 			$this->load->view('components/navbar');
-			$this->load->view('results');
+			$this->load->view('results', $Result);
 			$this->load->view('components/footer');
 		}
 	}
